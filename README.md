@@ -3,6 +3,10 @@ This respository explains an approach implemented for the final project of the c
 
 The aim of this project was to implement a controller in Python to drive a car around a track in the Carla Simulator. To control successfuly the vehicle, both longitudinal and lateral controllers were implemented, in order to obtain the throttle, brake and steering control signals.
 
+<p align = "center">
+<img src = "./demo_gif/Video_GIF.gif" height = "360" width = "630">
+</p>
+
 ## Tools
 The tools used for this project were:
 * Python
