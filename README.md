@@ -15,6 +15,17 @@ The tools used for this project were:
 ## Script
 Access the [Python script](https://github.com/kmilo7204/Self-Driving_Vehicle_Control/blob/master/controller2d.py) of the project. The `controller2d.py` contains the implementation of both controllers. The outputs of each controller are sent to the script `module_7.py` which connects our controllers with the Carla Simulator.
 
+All the files in this repository, should be added to the **PythonClient** folder in the Carla Simulator. To execute the script, please follow the next steps:
+
+1. In one terminal and within the **Carla Simulator** folder, start the simulator at 30 Hz fixed-time step:
+>CarlaUE4.exe /Game/Maps/RaceTrack -windowed -carla-server -benchmark -fps=30
+
+2. In other terminal and under the **PythonClient** folder execute:
+>python module_7.py
+
+It will execute the script which contains the controllers.
+
+>**Note:** The indications provided are oriented to Windows users.
 
 ## Controller
 
