@@ -89,4 +89,4 @@ Similar to the longitudinal controller, a image is provided to shown the perform
 Other types of controllers such as the Pure Pursuit or even the Model Predictive Control could be implemented to try to enhance the system performance.
 
 ## Video
-Find a video with the final results of this project in this [link](https://www.youtube.com/watch?v=hDeEsH9pHK8)
+Find a video with the final results of this project in this [link](https://www.youtube.com/watch?v=hDeEsH9pHK8).
