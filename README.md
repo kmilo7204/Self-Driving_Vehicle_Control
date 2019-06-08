@@ -28,9 +28,18 @@ It will execute the script which contains the controllers.
 >**Note:** The indications provided are oriented to Windows users.
 
 ## Controller
+### Vehicle model
+For explanatory purposes the Bicycle model is used to provide the reader an overview of how the lateral controller works and its implementation in this vehicle model.
+
+
+<p align = "center">
+<img  src = "./md_images/Bicycle%20model.png" heigth="290" width="350">
+</p>
+
+>Image provided by coursera
 
 ### Longitudinal controller
-For the vehicle longitudinal control, a PID controller was selected because its implementation is straightforward and always provides great results in different systems.
+For the vehicle longitudinal control, a PID controller was selected for two reasons: The first one was due to is easy implementation and tune, and the second one was due to the great results this controller provides in a wide range of systems.
 
 The PID controller takes as input the error speed, defined as the difference between the desired speed and the current speed of the vehicle and outputs the throttle and the brake signals. The PID controller was implemented into a feedback architecture.
 
@@ -51,6 +60,12 @@ The next three steps were followed to implement successfully the controller:
 
 3. Finally, to find the total steering angle I added both the Cross track and the Heading errors.
 
+<p align = "center">
+<img src = "./md_images/Stanley%20controller.png" heigth="290" width="350">
+</p>
+
+>Image provided by Coursera
+
 ### Results
 #### Longitudinal control
 To evaluate the performance of the longitudinal controller the next image is provided. In the graph, the speed profile proposed to drive the car around the track is in orange, and the real vehicle speed obtained by using the PID controller is in blue.
@@ -59,7 +74,7 @@ To evaluate the performance of the longitudinal controller the next image is pro
 <img  src = "./controller_output/Grade.png">
 </p>
 
->During the whole trajectory, the controller provided the right outputs to the vehicle to mantain the desired speed within the proposed profile; however, at some point (between the 500 to 750 waypoints) the controller did not reach the desired speed. 
+>During the whole trajectory, the controller provided the right outputs to the vehicle to mantain the desired speed within the proposed profile; however, at some point (between the 500 to 750 waypoints) the controller did not reach the desired speed, but a possible solution for this issue is to force a brake signal to reduce the speed in the corner.
 
 
 #### Lateral control
@@ -69,8 +84,9 @@ Similar to the longitudinal controller, a image is provided to shown the perform
 <img  src = "./controller_output/Waypoints%20Solution.png">
 </p>
 
->In this case, the vehicle followed the desired trajectory. The Stanley controller had a great performance overall and its precision was good enough for this case.
+>In this case, the vehicle followed the desired trajectory. The Stanley controller had a great performance overall and its precision was good enough for this case. 
 
+Other types of controllers such as the Pure Pursuit or even the Model Predictive Control could be implemented to try to enhance the system performance.
 
-A possible solution for this issue is to force a brake input to helps helps the vehicle to reduce the speed and reach the desired speed.
-Implementing an MPC.
+## Video
+Find a video with the final results of this project in this [link](https://www.youtube.com/watch?v=hDeEsH9pHK8)
